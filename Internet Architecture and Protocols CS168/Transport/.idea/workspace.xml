@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f04ca620-e79d-4f9a-9a33-9b5a7c38d81b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cs168-sp20-proj2-tcp-asozer/proj2_transport/pox/pox/py.py" beforeDir="false" afterPath="$PROJECT_DIR$/cs168-sp20-proj2-tcp-asozer/proj2_transport/pox/pox/py.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/cs168-sp20-proj2-tcp-asozer" />
+  </component>
+  <component name="ProjectId" id="1alHDp7iHSxPhcVE6SfHc8pT0wE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f04ca620-e79d-4f9a-9a33-9b5a7c38d81b" name="Default Changelist" comment="" />
+      <created>1587303143717</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587303143717</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="474" y="208" key="#Inspections" timestamp="1587303235748">
+      <screen x="0" y="23" width="1680" height="999" />
+    </state>
+    <state x="474" y="208" key="#Inspections/0.23.1680.999@0.23.1680.999" timestamp="1587303235748" />
+    <state x="349" y="161" key="SettingsEditor" timestamp="1587303251113">
+      <screen x="0" y="23" width="1680" height="999" />
+    </state>
+    <state x="349" y="161" key="SettingsEditor/0.23.1680.999@0.23.1680.999" timestamp="1587303251113" />
+  </component>
+</project>

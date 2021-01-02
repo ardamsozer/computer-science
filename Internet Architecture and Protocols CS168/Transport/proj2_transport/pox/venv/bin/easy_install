@@ -1,0 +1,10 @@
+#!/Users/ardamsozer/Documents/School/CS168/proj2/cs168-sp20-proj2-tcp-asozer/proj2_transport/pox/venv/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from setuptools.command.easy_install import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
