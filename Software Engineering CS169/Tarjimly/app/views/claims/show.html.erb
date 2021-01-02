@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
+
+
+<h3>Details for <%= @claim.title %> </h3>
+
+<li class="requests">
+  Title: <%= @claim.title %><br />
+  <li>
+  Request Language: <%= @claim.from_language %><br />
+  <li>
+  Translation Language: <%= @claim.to_language %><br />
+  <li>
+  Status: <%= @claim._status %><br />
+  <li>
+  Categories: <%= @claim.categories %><br />
+  <li>
+  Description: <%= @claim.description %>
+  <li>
+  Deadline: <%= @claim.deadline %>
+</li>
+
+<%= button_to "All Claims", claims_path, action: "index", method: :get %>
+<%= button_to "Delete Claim", delete_claim_path, claim_id: @claim.id, action: "delete", method: :delete, data: { confirm: 'Are you sure you want to delete this request?', title: 'Confirm Request Deletion', commit: 'YES', cancel: 'NO'} %>

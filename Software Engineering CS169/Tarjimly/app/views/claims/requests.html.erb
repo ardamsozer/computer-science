@@ -1,0 +1,26 @@
+<h3>Pending Requests</h3>
+
+<%=link_to "Sort by deadline", controller: "claims", action: "requests", sort_by_deadline: true%>
+
+<%=form_tag "requests", method: "get" do %>
+<%=label_tag "From Language"%>
+<%=text_field_tag "from_language"%>
+<%=label_tag "To Language"%>
+<%=text_field_tag "to_language"%>
+<%=submit_tag "Filter"%>
+<% end %>
+
+<% @requests.each do |request| %>
+  <li class="requests">
+    Title: <%= request.title %><br />
+    Desc: <%= request.description %><br />
+    From: <%= request.from_language %><br />
+    To: <%= request.to_language %><br />
+
+    Format: <%= request.document_format %><br />
+    Number of Claims: <%= request.num_claims %><br />
+    Categories: <%= request.categories %><br />
+    Deadline: <%= request.deadline %>
+  </li>
+  <br />
+<% end %>

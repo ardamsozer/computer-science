@@ -1,0 +1,45 @@
+<h1> My New Request! </h1>
+
+<%= form_for @request do |r| %>
+  <div>
+    <div style="padding: 5px 5px">
+      <%= r.label :from_language %>
+      <%= r.select("from_language", raw("<option>Arabic</option><option>English</option><option>Farsi</option><option>Greek</option>"), include_blank: true, required: true) %>
+      <%= r.label :to_language %>
+      <%= r.select("to_language", raw("<option>Arabic</option><option>English</option><option>Farsi</option><option>Greek</option>"), include_blank: true, required: true) %>
+    </div>
+
+    <div style="padding: 5px 5px">
+      <%= r.label :title %><br>
+      <%= r.text_field(:title, required: true) %>
+    </div>
+    <div style="padding: 5px 5px">
+      <%= r.label :description %><br>
+      <%= r.text_area(:description, size: "100x5", required: true) %>
+    </div>
+
+    <div style="padding: 5px 5px">
+      <%= r.label :document %><br>
+      <%= r.text_area(:document, size: "100x15", required: true) %>
+    </div>
+
+    <div style="padding: 5px 5px">
+      <%= r.label :deadline %><br>
+      <%= r. date_field(:deadline, min: Date.today, required: true) %>
+    </div>
+    <div style="padding: 5px 5px">
+      <% @categories = ["Legal", "Medical", "Housing", "Day To Day"]%>
+      <%= r.label :categories %><br>
+      <% @categories.each do |c| %>
+          <%= r.check_box :categories, { multiple: true }, c, false %>
+          <%= r.label c %>
+      <% end %>
+    </div>
+
+  </div>
+
+
+  <div style="padding: 5px 5px">
+    <%= r.submit %>
+  </div>
+<% end %>

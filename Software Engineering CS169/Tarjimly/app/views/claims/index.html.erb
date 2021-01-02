@@ -1,0 +1,44 @@
+<p id="notice"><%= flash[:notice] %></p>
+<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
+
+  
+<%# HEADING TITLES FOR BRANDON TO FINISH %>
+  
+<table>
+  <thead>
+    <tr>
+      <th> Title </th>
+      <th> Request Language </th>
+      <th> Translation Language </th>
+      <th> Description </th>
+      <th> Deadline </th>
+  </thead>
+
+  <tbody>
+  <% @claims.each do |claim| %>
+      <tr>  
+        <td> <%= claim.request.title %>  </td>
+        <td> <%= claim.request.from_language %> </td>
+        <td> <%= claim.request.to_language %> </td> 
+        <td> <%= claim.request.description %> </td> 
+        <td> <%= claim.request.deadline %></td> 
+        <td> <%=link_to "Submit Translation", claim_path(claim_id: claim.id), action: "show", method: :get %>
+      </tr>
+      <% end %>
+
+    <% @deleted_claims.each do |deleted_claim| %>
+      <tr>  
+        <td> <%= deleted_claim.request.title %>  </td>
+        <td> <%= deleted_claim.request.from_language %> </td>
+        <td> <%= deleted_claim.request.to_language %> </td>
+        <td> <%= deleted_claim.request.description %> </td>
+        <td> <%= deleted_claim.request.deadline %> </td>
+        <td> <%=link_to "Dismiss Claim for Deleted Request", delete_claim_path(claim_id: delete_claim.id), action: "delete", method: :delete, data: { confirm: 'This request has been deleted, and no longer requires translation! It will no longer show up in your claims', title: 'Confirm Request Deletion', commit: 'OKAY' } %>
+      </tr>
+      <% end %>
+
+    </tbody>
+
+  </table>
